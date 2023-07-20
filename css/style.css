@@ -1,0 +1,339 @@
+:root {
+  --body-bg-color: #1a1c1d;
+  --text-color: #aaaebc;
+  --hr-color: #26292a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-font-menu {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+}
+
+.main-font {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 7rem;
+}
+
+.renier-font {
+  font-family: "Russo One", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-inline: 0.5rem;
+}
+
+.footer-font {
+  font-family: "Russo One", sans-serif;
+}
+
+.galery-font {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  padding-top: 6rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-decoration: underline;
+}
+
+.nav-shadow {
+  box-shadow: 0.5px 0.7px 1.6px rgba(0, 0, 0, 0.057),
+    1.1px 1.7px 3.8px rgba(0, 0, 0, 0.082), 1.9px 3px 6.9px rgba(0, 0, 0, 0.101),
+    3.2px 5px 11.4px rgba(0, 0, 0, 0.119),
+    5.3px 8.2px 18.8px rgba(0, 0, 0, 0.138),
+    9.2px 14.3px 32.8px rgba(0, 0, 0, 0.163), 20px 31px 71px rgba(0, 0, 0, 0.22);
+}
+
+.renier-shadow {
+  text-shadow: 0.5px 0.5px 0.4px rgba(0, 0, 0, 0.052),
+    1.1px 1.1px 0.9px rgba(0, 0, 0, 0.075), 2px 1.9px 1.6px rgba(0, 0, 0, 0.092),
+    3.4px 3.2px 2.7px rgba(0, 0, 0, 0.108),
+    5.6px 5.3px 4.5px rgba(0, 0, 0, 0.125),
+    9.7px 9.2px 7.9px rgba(0, 0, 0, 0.148), 21px 20px 17px rgba(0, 0, 0, 0.2);
+}
+
+.custom-icon {
+  content: url(/img/guitarra.png);
+  width: 2rem;
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-inline: 0.5rem;
+}
+
+.menu a {
+  position: relative;
+  display: block;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(126, 125, 125),
+    rgb(228, 218, 218),
+    rgb(228, 218, 218),
+    rgb(126, 125, 125),
+    rgb(0, 0, 0)
+  );
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu a:hover::before {
+  transform: scaleX(1);
+}
+
+.transparent-button {
+  background-color: transparent;
+}
+
+.dropdown-item:active {
+  background-color: transparent;
+}
+
+/* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu[data-animation="to-left"] a::before {
+  transform-origin: right;
+}
+
+.menu[data-animation="center"] a::before {
+  transform-origin: center;
+}
+
+.menu[data-animation="bonus"] a::before {
+  transform-origin: right;
+}
+
+.menu[data-animation="bonus"] a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+.footer-menu {
+  background-color: #0d2033;
+  color: #fff;
+  margin-top: 0.313rem;
+  padding-inline: 0;
+}
+
+.copy-menu {
+  background-color: #0a1a2a;
+  padding-block: 0.188rem;
+  justify-content: center;
+  display: flex;
+  letter-spacing: 0.125rem;
+}
+
+.box-class {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.container .box-class a:hover {
+  color: aqua;
+}
+
+.is-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.is-pair div:nth-child(odd) {
+  flex-direction: row-reverse !important;
+  padding: 1em 0;
+}
+
+.galery {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 95%;
+  gap: 10px;
+  margin: auto;
+  padding: 40px 0 0 0;
+  overflow: hidden;
+}
+
+.galery img {
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s;
+  box-shadow: 0.5px 0.7px 1.6px rgba(0, 0, 0, 0.057),
+    1.1px 1.7px 3.8px rgba(0, 0, 0, 0.082), 1.9px 3px 6.9px rgba(0, 0, 0, 0.101),
+    3.2px 5px 11.4px rgba(0, 0, 0, 0.119),
+    5.3px 8.2px 18.8px rgba(0, 0, 0, 0.138),
+    9.2px 14.3px 32.8px rgba(0, 0, 0, 0.163), 20px 31px 71px rgba(0, 0, 0, 0.22);
+}
+
+.galery > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.galery:hover img {
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.light-box img {
+  width: 75vw;
+  max-height: 70vh;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 6rem;
+  right: 8rem;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.next {
+  display: block;
+  background: #851919;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .is-mobile {
+    flex-direction: column;
+  }
+
+  .box-class {
+    justify-content: center !important;
+  }
+
+  .box-img-class {
+    justify-content: center !important;
+  }
+
+  .box-img-class img {
+    width: 12.5rem !important;
+  }
+  .mid-section {
+    padding-inline: 2rem 0;
+    text-align: center;
+  }
+
+  .is-pair div:nth-child(odd) {
+    flex-direction: column-reverse !important;
+    padding: 1rem;
+  }
+  .is-pair div:nth-child(even) {
+    flex-direction: column-reverse !important;
+    padding: 1rem;
+  }
+
+  .container-img {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-img .box-img img {
+    height: 400px;
+    margin-top: 4rem;
+  }
+
+  .galery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .close {
+    top: 18rem;
+    right: 2rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .container-img {
+    width: 400px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-rows: 400px;
+  }
+
+  .container-img .box-img img {
+    margin-top: 4rem;
+  }
+
+  .box-img .box-img:nth-child(1) {
+    grid-column-start: span 1;
+  }
+
+  .close {
+    top: 8rem;
+    right: 4rem;
+  }
+}
+
+/* Tablet */
+/* @media (max-width: 768px)  {
+  .close{
+    top: 8rem;
+    right: 4rem;
+   }
+
+} */
+
+/* De aqui pa'rriba todo igual */
+@media (min-width: 992px) {
+}
