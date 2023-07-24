@@ -302,6 +302,15 @@
     top: 18rem;
     right: 2rem;
   }
+
+  .main-rhcp  {
+    flex-direction: column !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .width-img {
+    width: 100% !important;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -324,24 +333,11 @@
     top: 8rem;
     right: 4rem;
   }
-
-  /* .main-rhcp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center !important;   INTENTO DE MEDIA QUERY DEL MAIN RHCP
-    text-align: center;
-  } */
+  
 }
 
-/* Tablet */
-/* @media (max-width: 768px)  {
-  .close{
-    top: 8rem;
-    right: 4rem;
-   }
-
+/* @media screen and (min-width: 768px) and (max-width: 991px) {
+  
 } */
 
-/* De aqui pa'rriba todo igual */
-@media (min-width: 992px) {
-}
+
