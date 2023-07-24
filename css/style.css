@@ -57,12 +57,6 @@
     9.7px 9.2px 7.9px rgba(0, 0, 0, 0.148), 21px 20px 17px rgba(0, 0, 0, 0.2);
 }
 
-.custom-icon {
-  content: url(/img/guitarra.png);
-  width: 2rem;
-  display: flex;
-  margin-right: 0.5rem;
-}
 
 .menu {
   display: flex;
@@ -253,6 +247,10 @@
   text-decoration: none;
 }
 
+.renier-logo {
+  width: 125px;
+}
+
 
 @media (max-width: 576px) {
   .is-mobile {
@@ -311,6 +309,38 @@
   .width-img {
     width: 100% !important;
   }
+  .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+
+  }
+
+  .navbar-nav .dropdown-menu {
+    background: #f8f9fa;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .menu a {
+    position: relative;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+  }
+
+  .renier-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 125px;
+  }
+
+
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
